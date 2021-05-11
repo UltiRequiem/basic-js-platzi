@@ -4,7 +4,7 @@ function myFunc() {
 }
 
 // Expressive function
-var mySecondFunc = function (a, b) {
+let mySecondFunc = function (a, b) {
   return a + b;
 };
 
