@@ -1,3 +1,4 @@
+var username = "UltiRequiem"; // Declare and initialize in the same line
 var age; // Declare
 age = 14; // initialize
 
@@ -6,12 +7,10 @@ var me = {
   age: 14,
 };
 
-var username = "UltiRequiem"; // Declare and initialize in the same line
-
 var hobbies = ["Code", "Music", "Anime", "Manga", "Maths"]; // Arrays
 
 // Print in console
-console.log("Hi! My name is " + username + " and I'm " + age + " years old.");
+console.log(`Hi! My name is ${username} and I'm ${age} years old.`)
 
 console.log("Some of my hobbies are:");
 // For
