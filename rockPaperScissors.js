@@ -53,11 +53,11 @@ function determineWinner(userChoice, computerChoice) {
 }
 
 function playGame(input) {
-  var userChoice = getUserChoice(input.toLowerCase());
-  var computerChoice = getComputerChoice();
+  let userChoice = getUserChoice(input.toLowerCase());
+  let computerChoice = getComputerChoice();
   console.log(`You threw ${userChoice}!`);
   console.log(`Computer threw ${computerChoice}!`);
-  console.log(determineWinner(userChoice, computerChoicez));
+  console.log(determineWinner(userChoice, computerChoice));
 }
 
 rl.question(`Rock, papper or Scissors?`, (input) => {
