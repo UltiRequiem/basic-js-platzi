@@ -1,30 +1,19 @@
-const readline = require("readline");
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-const getUserChoice = (userInput) => {
-  if (
-    userInput === "rock" ||
-    userInput === "paper" ||
-    userInput === "scissors"
-  ) {
+function getUserChoice(userInput) {
+  if (userInput == "rock" || "papper" || "scissors") {
     return userInput;
   } else {
     console.log("Not a valid choice");
   }
-};
+}
 
 function getComputerChoice() {
-  switch (Math.floor(Math.random() * 3)) {
-    case 0:
-      return "rock";
-    case 1:
-      return "scissors";
-    case 2:
-      return "paper";
+  computerChoice = Math.random(Math.random() * 3);
+  if (computerChoice === 0) {
+    return "rock";
+  } else if (computerChoice == 1) {
+    return "scissors";
+  } else {
+    return "papper";
   }
 }
 
@@ -59,6 +48,13 @@ function playGame(input) {
   console.log(`Computer threw ${computerChoice}!`);
   console.log(determineWinner(userChoice, computerChoice));
 }
+
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
 rl.question(`Rock, papper or Scissors?`, (input) => {
   playGame(input);
