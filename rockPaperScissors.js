@@ -1,5 +1,5 @@
 function getUserChoice(userInput) {
-  if (userInput == "rock" || "papper" || "scissors") {
+  if (userInput === "rock" || "paper" || "scissors") {
     return userInput;
   } else {
     console.log("Not a valid choice");
@@ -7,13 +7,13 @@ function getUserChoice(userInput) {
 }
 
 function getComputerChoice() {
-  computerChoice = Math.random(Math.random() * 3);
+  let computerChoice = Math.random(Math.random() * 3);
   if (computerChoice === 0) {
     return "rock";
-  } else if (computerChoice == 1) {
+  } else if (computerChoice === 1) {
     return "scissors";
   } else {
-    return "papper";
+    return "paper";
   }
 }
 
@@ -27,7 +27,7 @@ function determineWinner(userChoice, computerChoice) {
       return "You win!";
     }
   } else if (userChoice === "paper") {
-    if (compterChoice === "scissors") {
+    if (computerChoice === "scissors") {
       return "Computer wins!";
     } else {
       return "You win!";
@@ -56,7 +56,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question(`Rock, papper or Scissors?`, (input) => {
+rl.question(`Rock, paper or Scissors?`, (input) => {
   playGame(input);
   rl.close();
 });
