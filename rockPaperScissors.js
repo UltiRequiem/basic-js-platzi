@@ -1,11 +1,3 @@
-function getUserChoice(userInput) {
-  if (userInput === "rock" || "paper" || "scissors") {
-    return userInput;
-  } else {
-    console.log("Not a valid choice");
-  }
-}
-
 function getComputerChoice() {
   let computerChoice = Math.random(Math.random() * 3);
   if (computerChoice === 0) {
@@ -42,7 +34,7 @@ function determineWinner(userChoice, computerChoice) {
 }
 
 function playGame(input) {
-  let userChoice = getUserChoice(input.toLowerCase());
+  let userChoice = input.toLowerCase();
   let computerChoice = getComputerChoice();
   console.log(`You threw ${userChoice}!`);
   console.log(`Computer threw ${computerChoice}!`);
@@ -60,4 +52,3 @@ rl.question(`Rock, paper or Scissors?`, (input) => {
   playGame(input);
   rl.close();
 });
-
