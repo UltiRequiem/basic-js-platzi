@@ -60,3 +60,4 @@ rl.question(`Rock, paper or Scissors?`, (input) => {
   playGame(input);
   rl.close();
 });
+
