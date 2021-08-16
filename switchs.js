@@ -16,4 +16,3 @@ switch (num) {
 }
 
 console.log(result);
-
